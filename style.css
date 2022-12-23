@@ -8,6 +8,11 @@ body{
     height: 48px;
     left: 40px;
     top: 40px;
+    float: left;
+}
+
+#botonCopiar{
+    display: none;
 }
 
 
