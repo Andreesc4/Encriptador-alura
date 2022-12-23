@@ -1,0 +1,29 @@
+body{
+    background: #E9ECF8;
+}
+
+.logoAlura{
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+
+
+@media screen and (max-width:480px) {
+    header{
+        position: absolute;
+        width: 375px;
+        height: 96px;
+        left: 0px;
+        top: 0px;
+    }
+    .logoAlura{
+        position: relative;
+        width: auto;
+        left: -25px;
+        top: 20px;
+    }
+}
