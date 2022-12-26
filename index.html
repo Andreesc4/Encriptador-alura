@@ -14,12 +14,25 @@
             <h1><img class="logoAlura" src="imagenes/Logo.png" alt="Logo de alura"></h1>
         </section>
     </header>
+
     <main>
-        <textarea name="escribirTexto" id="textoEncriptado"></textarea>
-        <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10"></textarea>
-        <button type="button" id="botonEncriptado">Encriptar</button>
-        <button type="button" id="botonDesencriptado">Desencriptar</button>
-        <button type="button" id="botonCopiar">Copiar</button>
+        <section class="panelIzquierdo">
+            <div class="contenedorTextoE">
+                <textarea name="escribirTexto" id="textoEncriptado"></textarea>
+            </div>
+            <div class="contenedorBotones">
+                <button type="button" id="botonEncriptado">Encriptar</button>
+                <button type="button" id="botonDesencriptado">Desencriptar</button>
+            </div>
+        </section>
+        <section class="panelDerecho">
+            <div class="contenedorTextoD">
+                <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10"></textarea>
+            </div>
+            <div class="contenedorBotonCopiar">
+                <button type="button" id="botonCopiar">Copiar</button>
+            </div>
+        </section>
     </main>
     <footer>
 
