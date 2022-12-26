@@ -1,5 +1,12 @@
 body{
+    position: relative;
+    width: 940px;
+    height: auto;
     background: #E9ECF8;
+}
+
+header{
+    padding: 20px 0;
 }
 
 .logoAlura{
@@ -8,7 +15,35 @@ body{
     height: 48px;
     left: 40px;
     top: 40px;
-    float: left;
+}
+
+.panelIzquierdo{
+    width: 60%;
+    display: inline-block;
+    padding: 20px;
+}
+
+#textoEncriptado{
+    width: 577px;
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    background: transparent;
+    border: none;
+}
+
+.panelDerecho{
+    width: 20%;
+    display: inline-block;    
+    /* White */
+    background: #FFFFFF;
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
 }
 
 #botonCopiar{
@@ -19,16 +54,32 @@ body{
 
 @media screen and (max-width:480px) {
     header{
-        position: absolute;
+        display: inline-block;
         width: 375px;
         height: 96px;
         left: 0px;
         top: 0px;
+    }
+    body{
+        width: auto;
+    }
+
+    main{
+        display: block;
     }
     .logoAlura{
         position: relative;
         width: auto;
         left: -25px;
         top: 20px;
+    }
+
+    .panelIzquierdo, .panelDerecho{
+        width: auto;
+        display: block;
+    }
+
+    #textoEncriptado{
+        width: 100%;
     }
 }
