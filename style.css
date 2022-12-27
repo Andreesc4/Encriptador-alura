@@ -1,7 +1,4 @@
 body{
-    position: relative;
-    width: 940px;
-    height: auto;
     background: #E9ECF8;
 }
 
@@ -19,11 +16,17 @@ header{
 
 .panelIzquierdo{
     width: 60%;
+    height: 60%;
     display: inline-block;
     padding: 20px;
+    
 }
 
+
 #textoEncriptado{
+    position: inherit;
+    left: 240px;
+    top: 168px;
     width: 577px;
     height: 48px;
     font-family: 'Inter';
@@ -36,9 +39,82 @@ header{
     border: none;
 }
 
+#textoEncriptado::placeholder{
+    color: #0A3871;
+}
+
+.textoMinus{
+    position: inherit;
+    width: 229px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.contenedorBotones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    margin-top: 1em;
+    position: inherit;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+}
+
+#botonEncriptado{
+    width: 328px;
+    height: 67px;
+    font-size: 16px;
+    background-color: #0A3871;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#botonDesencriptado{
+    width: 328px;
+    height: 67px;
+    font-size: 16px;
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+
+
 .panelDerecho{
     width: 20%;
     display: inline-block;    
+    padding-bottom: 3em;
     /* White */
     background: #FFFFFF;
     /* shadow */
@@ -46,9 +122,17 @@ header{
     border-radius: 32px;
 }
 
+.muneco{
+    width: auto;
+    height: 304px;
+}
+
 #botonCopiar{
     display: none;
+
 }
+
+
 
 
 
@@ -79,7 +163,27 @@ header{
         display: block;
     }
 
-    #textoEncriptado{
+    #textoEncriptado, .textoMinus{
         width: 100%;
+        position: inherit;
     }
+    #botonEncriptado, #botonDesencriptado{
+        width: auto;
+    }
+
+    .contenedorBotones{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: normal;
+        align-items: normal;
+        padding: 0px;
+        gap: 24px;
+        margin-top: 1em;
+    }
+    
+    .muneco{
+        display: none;
+    }
+   
 }
