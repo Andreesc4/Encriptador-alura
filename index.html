@@ -18,18 +18,21 @@
     <main>
         <section class="panelIzquierdo">
             <div class="contenedorTextoE">
-                <textarea  name="escribirTexto" id="textoEncriptado" placeholder="Ingrese el texto aqui"></textarea>
+                <textarea  name="escribirTexto" id="textoEncriptado" rows="5" placeholder="Ingrese el texto aqui"></textarea>
             </div>
-            <p class="textoMinus"> Solo letras minúsculas y sin acentos</p>
-            <div class="contenedorBotones">
-                <button type="button" id="botonEncriptado">Encriptar</button>
-                <button type="button" id="botonDesencriptado">Desencriptar</button>
+            <div class="validar">
+                <p class="textoMinus">Solo letras minúsculas y sin acentos</p>
+                <div class="contenedorBotones">
+                    <button type="button" id="botonEncriptado">Encriptar</button>
+                    <button type="button" id="botonDesencriptado">Desencriptar</button>
+                </div>
             </div>
         </section>
         <section class="panelDerecho">
             <div> <img class="muneco" src="imagenes/Muñeco.png" alt="Muneco"> </div>
+            <h3 class="textoNing">Ningun mensaje fue encriptado</h3>
             <div class="contenedorTextoD">
-                <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10"></textarea>
+                <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10" placeholder="encuentra el texto que deseas encriptar o desencriptar"></textarea>
             </div>
             <div class="contenedorBotonCopiar">
                 <button type="button" id="botonCopiar">Copiar</button>
