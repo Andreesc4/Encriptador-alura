@@ -1,5 +1,7 @@
 function encriptar() {
     var frase = document.getElementById("textoEncriptado").value.toLowerCase();
+    document.getElementById("textoEncriptado").value = "";
+    document.getElementById("textoEncriptado").focus();
 
     var textoEncriptado = frase.replace(/e/img,"enter");
     var textoEncriptado = textoEncriptado.replace(/i/img,"imes");
@@ -8,12 +10,19 @@ function encriptar() {
     var textoEncriptado = textoEncriptado.replace(/u/img,"ufat");
 
     document.getElementById("textoDesencriptado").innerHTML = textoEncriptado;
+    document.getElementById("noResuelto").style.visibility = "hidden";
+    document.getElementById("textoDesencriptado").style.display = "show";
+    document.getElementById("textoDesencriptado").style.display = "inherit";
     document.getElementById("botonCopiar").style.display = "show";
     document.getElementById("botonCopiar").style.display = "inherit";
+
+
 }
 
 function desencriptar() {
     var frase = document.getElementById("textoEncriptado").value.toLowerCase();
+    document.getElementById("textoEncriptado").value = "";
+    document.getElementById("textoEncriptado").focus();
 
     var textoEncriptado = frase.replace(/enter/img,"e");
     var textoEncriptado = textoEncriptado.replace(/imes/img,"i");
@@ -22,6 +31,7 @@ function desencriptar() {
     var textoEncriptado = textoEncriptado.replace(/ufat/img,"u");
 
     document.getElementById("textoDesencriptado").innerHTML = textoEncriptado;
+    document.getElementById("noResuelto").style.visibility = "hidden";
 }
 
 function copiar() {

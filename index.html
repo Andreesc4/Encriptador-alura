@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a0ca191c27.js" crossorigin="anonymous"></script>
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/LogoPestaña.png">
 </head>
 <body>
     <header>
@@ -21,7 +23,7 @@
                 <textarea  name="escribirTexto" id="textoEncriptado" rows="5" placeholder="Ingrese el texto aqui"></textarea>
             </div>
             <div class="validar">
-                <p class="textoMinus">Solo letras minúsculas y sin acentos</p>
+                <p class="textoMinus"><i class="fa-solid fa-circle-exclamation"></i>Solo letras minúsculas y sin acentos</p>
                 <div class="contenedorBotones">
                     <button type="button" id="botonEncriptado">Encriptar</button>
                     <button type="button" id="botonDesencriptado">Desencriptar</button>
@@ -29,18 +31,23 @@
             </div>
         </section>
         <section class="panelDerecho">
-            <div> <img class="muneco" src="imagenes/Muñeco.png" alt="Muneco"> </div>
-            <h3 class="textoNing">Ningun mensaje fue encriptado</h3>
-            <div class="contenedorTextoD">
-                <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10" placeholder="encuentra el texto que deseas encriptar o desencriptar"></textarea>
+            <div id="noResuelto">
+                <div> <img class="muneco" src="imagenes/Muñeco.png" alt="Muneco"> </div>
+                <h3 class="textoNing">Ningun mensaje fue encriptado</h3>
+                <p>Encuentra el texto que deseas encriptar o desencriptar</p>
             </div>
-            <div class="contenedorBotonCopiar">
+            <div class="contenedorTextoD">
+                <textarea name="resultado" id="textoDesencriptado"></textarea>
                 <button type="button" id="botonCopiar">Copiar</button>
             </div>
         </section>
     </main>
     <footer>
-
+        <div class="social">
+            <p> &#169; Hecho por Andres Castillo</p>
+            <a href="https://github.com/Andreesc4/Encriptador-alura"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/andrescastillo-dev/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
     </footer>
 
     

@@ -1,5 +1,6 @@
 body{
     background: #E9ECF8;
+    overflow-y: hidden;
 }
 
 header{
@@ -108,25 +109,23 @@ main{
     flex-grow: 0;
 }
 
-
-
-
 .panelDerecho{
     display: flex;  
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 400px;
-    height: 755px;
- 
-    /* White */
+    height: auto;
     background: #FFFFFF;
-    /* shadow */
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
 
-.panelDerecho .muneco{
+#noResuelto{
+    position: absolute;
+}
+
+.muneco{
     width: auto;
 }
 
@@ -141,42 +140,91 @@ main{
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-    /* or 29px */
-
     text-align: center;
-
-    /* Gray/gray-500 */
-
     color: #343A40;
-
-
-    /* Inside auto layout */
-
     flex: none;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
 }
 
+.contenedorTextoD{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
 #textoDesencriptado{
+
+    width: 350px;
+    height: 650px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
     border: none;
     resize: none;
+    display: none;
+    background: transparent;
 }
+
+#textoDesencriptado:focus{
+    outline: none;
+}
+
 
 #textoDesencriptado::placeholder{
     color: black;
 }
 
 #botonCopiar{
+    box-sizing: border-box;
+    width: 336px;
+    height: 67px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0A3871;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
     display: none;
 
 }
 
+footer .social{
+    text-align: center;
+    padding: 10px;
+}
+
+footer .social p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+
+footer .social a{
+    font-size: 24px;
+    color: #0A3871;
+    padding: 5px;
+}
 
 
-
-
-@media screen and (max-width:480px) {
+@media screen and (max-width:1210px) {
     header{
         display: inline-block;
         width: 375px;
@@ -191,6 +239,7 @@ main{
     main{
         width: 95%;
         grid-template-columns: 1fr;
+        margin-bottom: 0;
     }
     .logoAlura{
         position: relative;
@@ -204,7 +253,7 @@ main{
         height: auto;
     }
 
-    #textoEncriptado{
+    #textoEncriptado, #textoDesencriptado{
         height: auto;
         margin: 0;
         
@@ -231,4 +280,19 @@ main{
         display: none;
     }
    
+}
+
+@media screen and (max-width:1480px){
+    main{
+        margin-bottom: 0;
+    }
+    .panelIzquierdo, .panelDerecho{
+        width: auto;
+        height: auto;
+    }
+    #textoEncriptado{
+        height: auto;
+        margin: 0;
+    }
+
 }
