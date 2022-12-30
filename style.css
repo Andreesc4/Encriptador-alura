@@ -1,6 +1,5 @@
 body{
     background: #E9ECF8;
-    overflow-y: hidden;
 }
 
 header{
@@ -147,6 +146,11 @@ main{
     align-self: stretch;
     flex-grow: 0;
 }
+
+#noResuelto p{
+    text-align: center;
+}
+
 
 .contenedorTextoD{
     display: flex;
